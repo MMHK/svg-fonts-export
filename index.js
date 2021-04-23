@@ -74,7 +74,7 @@ app.use(async function(error, req, res, next) {
 });
 
 const options = cli.parse({
-    host: [ 'h', 'web server listen on address', 'ip', "0.0.0.0"],
+    host: [ 'h', 'web server listen on address', 'ip', "127.0.0.1"],
     port: [ 'p', 'listen on port', "string", "3654"],
 });
 

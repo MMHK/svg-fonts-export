@@ -14,4 +14,4 @@ RUN apk --update add git less openssh && \
 
 EXPOSE 3654
 
-CMD yarn service
+CMD yarn serve

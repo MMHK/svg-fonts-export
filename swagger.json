@@ -1,0 +1,59 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "Export svg image from a svg font file",
+    "version": "1.0.0",
+    "title": "SVG fonts Export",
+    "contact": {
+      "email": "sam@mixemdia.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "servers": [
+    {
+      "url": "/api"
+    }
+  ],
+  "paths": {
+    "/export": {
+      "post": {
+        "summary": "Upload a svg font file export svg images package",
+        "description": "",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "svg": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/zip": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    }
+  }
+}

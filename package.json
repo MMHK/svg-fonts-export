@@ -1,0 +1,21 @@
+{
+  "name": "svg-fonts-export",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/MMHK/svg-fonts-export.git",
+  "author": "Sam Zhou <sam@mixmedia.com>",
+  "license": "Apache-2.0",
+  "private": false,
+  "scripts": {
+    "dev": "node ./index.js",
+    "serve": "node ./index.js -h $HOST -p $PORT"
+  },
+  "dependencies": {
+    "archiver": "^5.3.0",
+    "cli": "^1.0.1",
+    "connect-busboy": "^0.0.2",
+    "express": "^4.17.1",
+    "svg-caster": "^0.4.1",
+    "swagger-ui-express": "^4.1.6"
+  }
+}
